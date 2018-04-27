@@ -1,0 +1,7 @@
+[
+	{
+		"id" : "TestSublimeTextPlugin",
+		"caption" : "TestSublimeTextPlugin",
+		"command" : "test_sublime_text_plugin"
+	}
+]
