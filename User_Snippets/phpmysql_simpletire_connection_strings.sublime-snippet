@@ -1,0 +1,25 @@
+<snippet>
+	<content><![CDATA[
+\$dbConn = mysqli_connect('localhost', 'dbuser', 'tires123', 'rpm_simpletire') or die("Error connecting to MySQL: " . mysqli_connect_error());
+\$dbConn = mysqli_connect('staging.cluster-c0zzuvbvffka.us-west-2.rds.amazonaws.com', 'root', 't1r3s123', 'rpm_simpletire') or die("Error connecting to MySQL: " . mysqli_connect_error());
+\$dbConn = mysqli_connect('simpletire-cluster.cluster-c0zzuvbvffka.us-west-2.rds.amazonaws.com', 'root', 't1r3s123', 'rpm_simpletire') or die("Error connecting to MySQL: " . mysqli_connect_error());
+## As a class method and implemetation ##
+private static function getDbConnectionLink() {
+    \$dbLink = null;
+    if((strstr(\$_SERVER['HTTP_HOST'], '.local') && empty(\$_SERVER['USE_PRODUCTION_DB']))
+    || (php_sapi_name() == 'cli' && (gethostname() == 'simplevagrant' && empty(\$_SERVER['USE_PRODUCTION_DB'])))) {
+        \$dbLink = mysqli_connect('localhost', 'dbuser', 'tires123', 'rpm_simpletire') or die("Error connecting to MySQL: " . mysqli_connect_error());
+    } else if(strstr(\$_SERVER['HTTP_HOST'], 'jenkins.simpletire.com')) {
+        \$dbLink = mysqli_connect('staging.cluster-c0zzuvbvffka.us-west-2.rds.amazonaws.com', 'root', 't1r3s123', 'rpm_simpletire') or die("Error connecting to MySQL: " . mysqli_connect_error());
+    } else {
+        \$dbLink = mysqli_connect('simpletire-cluster.cluster-c0zzuvbvffka.us-west-2.rds.amazonaws.com', 'root', 't1r3s123', 'rpm_simpletire') or die("Error connecting to MySQL: " . mysqli_connect_error());
+    }
+    return \$dbLink;
+}
+## Usage ##
+\$dbConn = self::getDbConnectionLink();
+$0
+]]></content>
+	<tabTrigger>phpmysql_simpletire_connection_strings</tabTrigger>
+	<scope>source.php,source.phps</scope>
+</snippet>

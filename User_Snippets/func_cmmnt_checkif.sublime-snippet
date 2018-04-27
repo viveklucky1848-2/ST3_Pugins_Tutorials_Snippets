@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+
+ * Check if ${1:description}.
+ *$0
+]]></content>
+	<tabTrigger>func_cmmnt_checkif</tabTrigger>
+</snippet>

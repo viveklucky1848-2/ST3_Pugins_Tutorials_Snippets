@@ -1,0 +1,22 @@
+<snippet>
+	<content><![CDATA[
+/**
+ * @expectedException \InvalidArgumentException
+ */
+public function testSet${1:EntityName}ThrowsExceptionWhenParameterInvalid()
+{
+    \$invalidDateTime = 'This is not a DateTime object.';
+    \$this->installers->set${1:EntityName}(\$invalidDateTime);
+}
+
+public function test${1:EntityName}GetterAndSetterWhenParameterValid()
+{
+    \$validDateTime = new \DateTime();
+    \$this->installers->set${1:EntityName}(\$validDateTime);
+    \$actualValue = \$this->installers->get${1:EntityName}();
+    \$this->assertEquals(\$validDateTime, \$actualValue);
+}$0
+]]></content>
+	<tabTrigger>phpunit_datetime_getset_validate_func</tabTrigger>
+	<scope>source.php,source.phps</scope>
+</snippet>

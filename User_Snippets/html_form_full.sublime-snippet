@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+<form id="${1:Form ID}" name="${1:Form Name}" method="${2:Submit Method - get|post|put}" enctype="${3:Data Encode Type}" action="${4:Action URL or URI}" target="${5:_self|_blank|_parent|_top}" accept-charset="${6:Form Charset}">
+	${7:Form elements here...}
+</form>
+$0
+]]></content>
+	<tabTrigger>html_form_full</tabTrigger>
+	<scope>text.html,source.php,text.html.twig,text.html.ctp,text.html.tpl,text.html.phtml</scope>
+</snippet>

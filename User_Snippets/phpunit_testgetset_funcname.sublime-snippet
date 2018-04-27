@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+public function test${1:EntityName/FuncNamePart}GetterAndSetter(\$testValue, \$expectedValue)$0
+]]></content>
+	<tabTrigger>phpunit_testgetset_funcname</tabTrigger>
+	<scope>source.php,source.phps</scope>
+</snippet>

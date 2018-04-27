@@ -1,0 +1,19 @@
+<snippet>
+	<content><![CDATA[
+<?php if (empty(\$o_status)) { ?>
+	<?= \$form->select('MyOrder.status', array(
+		'New' => 'New',
+		'Processed' => 'Processed',
+		'ReProcess' => 'ReProcess',
+		'Shipped' => 'Shipped',
+		'Completed' => 'Completed',
+		'Review' => 'Review',
+		'Void' => 'Void',
+		'CC' => 'CC'
+	), NULL, array(), false); ?>
+<?php } ?>
+<a href="javascript: toggleNonAutomatedStatus(\$j('#MyOrderStatus').val());"><img src="/img/icons/accept.gif"></a>$0
+]]></content>
+	<tabTrigger>cakephp_form_selectlist</tabTrigger>
+	<scope>source.php,text.html</scope>
+</snippet>

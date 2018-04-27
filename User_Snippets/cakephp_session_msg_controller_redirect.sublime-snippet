@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+\$this->Session->setFlash('${1:Message}');
+\$this->redirect(\$this->here);$0
+]]></content>
+	<tabTrigger>cakephp_session_msg_controller_redirect</tabTrigger>
+	<scope>source.php,source.phps</scope>
+</snippet>

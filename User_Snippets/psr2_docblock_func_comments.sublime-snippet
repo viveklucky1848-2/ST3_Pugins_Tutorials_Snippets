@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+/**
+ * ${1:function_desc}
+ *
+ * @param \$${2:param name} ${3:param type} - ${4:param description}
+ * @param \$${5:param name} ${6:param type} - ${7:param description}
+ *
+ * @return ${8:return type}
+ */$0
+]]></content>
+	<tabTrigger>psr2_docblock_func_comments</tabTrigger>
+	<scope>source.php</scope>
+</snippet>

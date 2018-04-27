@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+#!interpreter [optional-arg]
+]]></content>
+	<tabTrigger>shell_shebang_format</tabTrigger>
+	<scope>source.sh,source.make,source.shell</scope>
+</snippet>

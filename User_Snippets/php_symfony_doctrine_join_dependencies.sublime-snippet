@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Annotations;
+use Doctrine\Common\Annotations\AnnotationException;
+use Doctrine\Common\Collections\Collection;
+use Doctrine\Common\Collections\ArrayCollection;
+// use Doctrine\Common\Annotations\AnnotationReader;
+// use Doctrine\Common\Annotations\AnnotationRegistry;
+$0
+]]></content>
+	<tabTrigger>php_symfony_doctrine_join_dependencies</tabTrigger>
+	<scope>source.php,source.phps</scope>
+</snippet>

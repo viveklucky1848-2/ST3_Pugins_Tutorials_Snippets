@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+\$log = \$${1:Name_of_Model}->getDataSource()->showLog(false);
+debug(\$log);exit;$0
+]]></content>
+	<tabTrigger>Cakephp22_Model_Query_Debug</tabTrigger>
+	<scope>source.php</scope>
+</snippet>

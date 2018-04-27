@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+\$$jsonData = json_encode(\$$output);
+echo "<pre>";var_dump(\$$jsonData);echo "</pre>";
+exit;$0
+]]></content>
+	<tabTrigger>prntjsonresult</tabTrigger>
+	<scope>source.php</scope>
+</snippet>

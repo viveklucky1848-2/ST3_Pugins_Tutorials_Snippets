@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+require_once __DIR__."/../../../composer-libs/autoload.php";
+require_once __DIR__."${1:path_to}/autoload.php";$0
+]]></content>
+	<tabTrigger>php_require_autoload_complibs</tabTrigger>
+	<scope>source.php</scope>
+</snippet>

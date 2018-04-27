@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+if (!\$${1:Resource/Variable} instanceof \DateTime) {
+    throw new \InvalidArgumentException(
+        __METHOD__ . '/${1:Resource/Variable Name} must be an instance of DateTime.'
+    );
+}$0
+]]></content>
+	<tabTrigger>DateTimeValidationPHP</tabTrigger>
+	<scope>source.php,source.phps</scope>
+</snippet>

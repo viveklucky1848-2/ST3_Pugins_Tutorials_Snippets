@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+use Symfony\Component\Validator\Constraints as Assert;
+# Add the Assert statement in comment as below:
+@Assert \DateTime
+$0
+]]></content>
+	<tabTrigger>php_symfony_validate_assert</tabTrigger>
+	<scope>source.php,source.phps</scope>
+</snippet>

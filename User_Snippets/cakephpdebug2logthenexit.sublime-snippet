@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+App::uses('CakeLog', 'Log');
+exit(CakeLog::write('debug', '${1:ResourceName}::'.print_r(\$${1:ResourceName}, true)));
+$0
+]]></content>
+	<tabTrigger>cakephpdebug2logthenexit</tabTrigger>
+	<scope>source.php</scope>
+</snippet>

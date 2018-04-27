@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+$this->API_URL = 'api.simpletire.prod';
+]]></content>
+	<tabTrigger>simpletire_frontend_apiurl_debug</tabTrigger>
+	<scope>source.php</scope>
+</snippet>

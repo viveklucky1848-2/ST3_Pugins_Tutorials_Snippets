@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+#!/bin/sh
+#!/bin/bash
+#!/bin/csh -f
+#!/usr/bin/perl -T
+#!/usr/bin/env python
+#!/bin/sh -x
+$0
+]]></content>
+	<tabTrigger>shell_shebangs_list</tabTrigger>
+	<scope>source.sh,source.make,source.py,source.pl,source.shell</scope>
+</snippet>

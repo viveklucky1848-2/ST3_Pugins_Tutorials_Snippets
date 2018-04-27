@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+if (!is_null(\$${1:Resource/Argument/Variable}) && !\$${1:Resource/Argument/Variable} instanceof \DateTime) {
+    throw new \InvalidArgumentException(
+        __METHOD__ . '/${1:Resource/Argument/Variable} must be null or an instance of DateTime.'
+    );
+}
+\$this->${1:Resource/Argument/Variable} = \$${1:Resource/Argument/Variable};
+$0
+]]></content>
+	<tabTrigger>php_symfony_datetime_validator_setter</tabTrigger>
+	<scope>source.php,source.phps</scope>
+</snippet>

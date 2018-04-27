@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+echo "<pre>";print_r(\$${1:resource});echo "</pre>";
+echo "<pre>";var_dump(\$${1:resource});echo "</pre>";$0
+]]></content>
+	<tabTrigger>php_pretty_print</tabTrigger>
+	<scope>source.php</scope>
+</snippet>

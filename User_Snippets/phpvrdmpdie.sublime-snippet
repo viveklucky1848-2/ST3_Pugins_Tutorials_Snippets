@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+var_dump(\$${1:resource});exit;$0
+]]></content>
+	<tabTrigger>phpvrdmpdie</tabTrigger>
+	<scope>source.php,text.html</scope>
+</snippet>

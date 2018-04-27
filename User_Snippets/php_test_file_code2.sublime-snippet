@@ -1,0 +1,22 @@
+<snippet>
+    <content><![CDATA[
+function doesPhpSupport64Bit()
+{
+    if (intval("9223372036854775807") == 9223372036854775807 && strlen(decbin(~0)) == 64 && PHP_INT_MAX > 2147483647) {
+        echo "This PHP truly is 64Bit.";
+        return true;
+    } else {
+        echo "This PHP is still limited to 32Bit only.";
+        return false;
+    }
+}
+function isPhp64Bit() {
+    var_dump(php_uname());exit;
+}
+doesPhpSupport64Bit();
+exit(phpinfo());
+?>$0
+]]></content>
+    <tabTrigger>php_test_file_code2</tabTrigger>
+    <scope>source.php,source.phps</scope>
+</snippet>

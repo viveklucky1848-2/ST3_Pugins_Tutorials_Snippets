@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+/**
+ * ${1:function_desc}
+ *
+ * @param ${2:param type} \$${3:param name}
+ * @param ${4:param type} \$${5:param name}
+ *
+ * @return ${6:return type}
+ *
+ * @Route("/${7:routeName}")
+ */$0
+]]></content>
+	<tabTrigger>psr2_route_docblock_symfony_contaction</tabTrigger>
+	<scope>source.php</scope>
+</snippet>

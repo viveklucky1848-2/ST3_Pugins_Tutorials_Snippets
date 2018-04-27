@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+# Add below function into your CakePHP 1.x app_model.php Class
+public function getExecutedQueries(\$OnlyLastQuery = false) {
+	\$dbo = \$this->getDatasource();
+	\$logs = \$dbo->_queriesLog;
+	if(\$OnlyLastQuery === true) return end(\$logs);
+	else return \$logs;
+}
+# call this function like below in your controller files:
+# debug(\$this->MyProduct->getExecutedQueries(true));$0
+]]></content>
+	<tabTrigger>cakephp_queries_fulllog</tabTrigger>
+	<scope>source.php</scope>
+</snippet>

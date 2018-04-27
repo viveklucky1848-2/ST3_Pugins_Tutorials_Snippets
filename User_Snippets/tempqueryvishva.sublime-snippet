@@ -1,0 +1,24 @@
+<snippet>
+	<content><![CDATA[
+// \$sql = "SELECT
+// 			mo.id AS ID, 
+// 			mo.source, 
+// 			mo.user_id, 
+// 			mo.created, 
+// 			mop.price AS Price, 
+// 			mop.quantity, 
+// 			mo.shipping_zip, 
+// 			mo.shipping_city, 
+// 			mo.shipping_state, 
+// 			mo.shipping_country, 
+// 			mo.shipping_residential, 
+// 			mo.shipping_total AS Shipping_Collected 
+// 		FROM 
+// 			my_orders mo 
+// 			INNER JOIN analytic_orders ao ON ao.my_order_id = mo.id 
+// 			LEFT JOIN my_order_products mop ON mop.my_order_id = mo.id
+// 		WHERE DATE(mo.created) BETWEEN '2017-08-24' AND '2017-11-23'";
+]]></content>
+	<tabTrigger>tempqueryvishva</tabTrigger>
+	<scope>source.php</scope>
+</snippet>

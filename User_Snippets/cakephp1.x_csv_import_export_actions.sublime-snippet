@@ -1,0 +1,68 @@
+<snippet>
+	<content><![CDATA[
+	/**
+     * Csv download action
+     */
+    public function ${1:ExportFunctionName}() {
+        Configure::write('debug', 0);
+        \$this->autoRender = true;
+        \$this->${3:ModelName}->unBindAll();
+        \$manufacturers = \$this->${3:ModelName}->find('all',
+                            array(
+                                'fields' => array('${3:ModelName}.id', '${3:ModelName}.name', '${3:ModelName}.brand_tier_rating'),
+                                'order' => '${3:ModelName}.id DESC'
+                            )
+                        );
+        \$this->set('manufacturerBrandRatings', \$manufacturers);
+    }
+
+    /**
+     * CSV Upload Action
+     */
+    public function ${2:ImportFunctionName}() {
+        Configure::write('debug', 0);
+        \$this->autoRender = false;
+        \$this->${3:ModelName}->unBindAll();
+        \$this->data = array(\$_POST, \$_FILES);
+        \$csvNewData = array();
+
+        if (isset(\$_POST['Upload'])) {
+            if (!empty(\$_FILES['csvUpload'])) {
+                \$filenameSanitized = preg_replace('/\s+/', '_', \$_FILES['csvUpload']['name']);
+                \$filename = explode('.', \$filenameSanitized);
+                if (end(\$filename) == 'csv') {
+                    \$fileHandle = fopen(\$_FILES['csvUpload']['tmp_name'], "r");
+
+                    \$csvRowsKeys = fgetcsv(\$fileHandle);
+                    while ((\$line = fgetcsv(\$fileHandle, 0, ',')) !== false) {
+                        \$csvNewData[] = array_combine(\$csvRowsKeys, \$line);
+                    }
+                    fclose(\$fileHandle);
+
+                    try {
+                        foreach (\$csvNewData as \$csvNewRow) {
+                            \$brandTierRating = \$csvNewRow['brand_tier_rating'];
+                            // Only numbers 1 to 4 are allowed as Tier Ratings
+                            if (!in_array(\$csvNewRow['brand_tier_rating'], array(1, 2, 3, 4))) {
+                                \$brandTierRating = 4;
+                            }
+                            \$this->${3:ModelName}->updateAll(
+                                array('${3:ModelName}.brand_tier_rating' => \$brandTierRating),
+                                array('${3:ModelName}.id' => \$csvNewRow['id'], '${3:ModelName}.deleted' => null, '${3:ModelName}.name' => \$csvNewRow['name'])
+                            );
+                        }
+                        \$this->Session->setFlash('Data saved successfully');
+                        \$this->redirect('/my_manufacturers/index');
+                    } catch(Exception \$e) {
+                        \$this->Session->setFlash('There was an error importing the data.');
+                        \$this->redirect('/my_manufacturers/index');
+                    }
+                }
+            }
+        }
+    }
+$0
+]]></content>
+	<tabTrigger>cakephp1.x_csv_import_export_actions</tabTrigger>
+	<scope>source.php,source.phps</scope>
+</snippet>

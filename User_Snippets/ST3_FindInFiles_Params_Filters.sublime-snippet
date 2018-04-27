@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+C:\Users\WMIND2004\Projects\simple\\${1:RepoDirName},-*/${2:IgnoreDir1Name}/*,-*/${3:IgnoreDir2Name}/*,-*/${4:IgnoreDir3Name}/*,*.${5:FileExtension1},*.${6:FileExtension2}
+C:\Users\WMIND2004\Projects\simple\backend, -*/_baks_/*, -*/_branded/*, -*/_shared/*, *.ctp, *.php, *.js
+$0
+]]></content>
+	<tabTrigger>ST3_FindInFiles_Params_Filters</tabTrigger>
+</snippet>

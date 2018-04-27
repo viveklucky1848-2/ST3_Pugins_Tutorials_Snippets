@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+public function getLastQuery() {
+	\$dbo = \$this->getDatasource();
+	\$logs = \$dbo->_queriesLog;
+	return end(\$logs);
+}
+]]></content>
+	<tabTrigger>cakephp_func_last_query</tabTrigger>
+	<scope>source.php</scope>
+</snippet>

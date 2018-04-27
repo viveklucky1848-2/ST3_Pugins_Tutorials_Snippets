@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+\$time = new \\DateTime();
+\$nowDateTime = \$time->format('H:i:s \\O\\n Y-m-d');$0
+]]></content>
+	<tabTrigger>php_datetime_wformat</tabTrigger>
+	<scope>source.php</scope>
+</snippet>

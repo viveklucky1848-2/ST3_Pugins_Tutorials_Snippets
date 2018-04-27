@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+{
+    "tab_size": 4,
+    "translate_tabs_to_spaces": ${1:true|false},
+}
+$0
+]]></content>
+	<tabTrigger>tabs2Spaces</tabTrigger>
+	<!-- <scope>source.sublime-settings,text.sublime-settings,text.*</scope> -->
+</snippet>

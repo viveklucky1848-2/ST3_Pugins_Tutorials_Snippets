@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+/**
+ * This class ${1:rest of docblock comment}
+ */$0
+]]></content>
+	<tabTrigger>psr2_class_docblock</tabTrigger>
+	<scope>source.php</scope>
+</snippet>

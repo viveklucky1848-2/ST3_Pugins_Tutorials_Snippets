@@ -1,0 +1,27 @@
+<snippet>
+	<content><![CDATA[
+'host' => 'simpletire-cluster.cluster-c0zzuvbvffka.us-west-2.rds.amazonaws.com',
+'login' => 'root',
+'password' => 't1r3s123',
+'database' => 'rpm_simpletire',
+
+'host' => 'simpletire-readreplica1.c0zzuvbvffka.us-west-2.rds.amazonaws.com',
+'login' => 'root',
+'password' => 't1r3s123',
+'database' => 'rpm_simpletire',
+
+mysql_connect("simpletire-readreplica1.c0zzuvbvffka.us-west-2.rds.amazonaws.com", "root", "t1r3s123") or die(mysql_error());
+mysql_select_db("rpm_simpletire") or die(mysql_error());
+
+mysql_connect("simpletire-cluster.cluster-c0zzuvbvffka.us-west-2.rds.amazonaws.com", "root", "t1r3s123") or die(mysql_error());
+mysql_select_db("rpm_simpletire") or die(mysql_error());
+
+$dbConn = @mysqli_connect('simpletire-readreplica1.c0zzuvbvffka.us-west-2.rds.amazonaws.com', 'root', 't1r3s123', 'rpm_simpletire');
+
+$dbConn = @mysqli_connect('simpletire-cluster.cluster-c0zzuvbvffka.us-west-2.rds.amazonaws.com', 'root', 't1r3s123', 'rpm_simpletire');
+
+$0
+]]></content>
+	<tabTrigger>simpletire_db_conn_config</tabTrigger>
+	<scope>source.php,text.html</scope>
+</snippet>

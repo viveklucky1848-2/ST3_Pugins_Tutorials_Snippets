@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+public function test${1:EntityName/FuncName}GetterAndSetter(\$testValue, \$expectedValue)
+{
+	\$this->installers->set${1:EntityName}(\$testValue);
+	\$actualValue = \$this->installers->get${1:EntityName}();
+	\$this->assertSame(\$actualValue, \$expectedValue);
+}$0
+]]></content>
+	<tabTrigger>phpunit_getter_setter_function_full</tabTrigger>
+	<scope>source.php,source.phps</scope>
+</snippet>

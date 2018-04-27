@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+#!/bin/sh – Execute the file using the Bourne shell, or a compatible shell, with path /bin/sh
+#!/bin/bash – Execute the file using the Bash shell.
+#!/bin/csh -f – Execute the file using csh, the C shell, or a compatible shell, and suppress the execution of the user’s .cshrc file on startup
+#!/usr/bin/perl -T – Execute using Perl with the option for taint checks
+#!/usr/bin/env python – Execute using Python by looking up the path to the Python interpreter automatically via env
+]]></content>
+	<tabTrigger>shell_shebangs_info</tabTrigger>
+	<scope>source.sh,source.make,source.shell</scope>
+</snippet>

@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+->add('${1:FieldName}', ${2:Variable/null}, [
+    'label' => '${3:LabelText}',
+    'attr' => [
+        'readonly' => true,
+        'disabled' => true,
+        'style' => '${4:CSS Styles}',
+        '${5:AttrName}' => '${6:AttrValue}',
+        '${7:AttrName}' => '${8:AttrValue}'
+    ]
+])$0
+]]></content>
+	<tabTrigger>php_symfony_form_field_add</tabTrigger>
+	<scope>source.php,source.phps</scope>
+</snippet>

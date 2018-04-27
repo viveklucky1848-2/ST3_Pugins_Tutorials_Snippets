@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+B-701, Westgate Building, Nr. YMCA Club,
+Makarba, S.G. Highway,
+Ahmedabad, Gujarat, 380015.
+$0
+]]></content>
+	<tabTrigger>offcaddr</tabTrigger>
+	<!-- <scope>*</scope> -->
+</snippet>

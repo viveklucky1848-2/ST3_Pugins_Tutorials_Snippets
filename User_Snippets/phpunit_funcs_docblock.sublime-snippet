@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+/**
+ * @dataProvider ${1:integer|float|string|boolean}Provider
+ * @param mixed \$testValue
+ * @param ${2:Param datatype} \$expectedValue
+ */$0
+]]></content>
+	<tabTrigger>phpunit_funcs_docblock</tabTrigger>
+	<scope>source.php,source.phps</scope>
+</snippet>

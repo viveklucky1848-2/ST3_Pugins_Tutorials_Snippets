@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+use Psr\Log\LoggerInterface;
+LoggerInterface \$logger
+\$logger->error(__METHOD__ . '/${1:Initial message to show}: ' . \$e->getMessage());$0
+]]></content>
+	<tabTrigger>symfony_use_psr_logger</tabTrigger>
+	<scope>source.php</scope>
+</snippet>

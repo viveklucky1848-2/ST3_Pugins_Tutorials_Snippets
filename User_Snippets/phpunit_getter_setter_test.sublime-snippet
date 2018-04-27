@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+\$this->installers->set${1:EntityName}(\$${2:testValue});
+\$actualValue = \$this->installers->get${1:EntityName}();
+\$this->assertSame(\$actualValue, \$${3:expectedValue});$0
+]]></content>
+	<tabTrigger>phpunit_getter_setter_test</tabTrigger>
+	<scope>source.php,source.phps</scope>
+</snippet>

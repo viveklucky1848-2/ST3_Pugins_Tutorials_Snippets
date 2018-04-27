@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+App::import('AppModel', 'Model');
+class ${1:ModelName} extends AppModel
+{
+	var \$name = '${1:ModelName}';
+	var \$useTable = '${2:TableName}';
+	var \$order = '${1:ModelName}.id ASC';
+	${3:PHP Code for Model}
+}
+$0
+]]></content>
+	<tabTrigger>cakephp_custom_fresh_model</tabTrigger>
+	<scope>source.php,source.phps</scope>
+</snippet>

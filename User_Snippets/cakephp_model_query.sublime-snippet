@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+\$${1:resource} = \$this->MyProduct->getDatasource()->_queriesLog;
+debug(\$${1:resource});$0
+]]></content>
+	<tabTrigger>cakephp_model_query</tabTrigger>
+	<scope>source.php</scope>
+</snippet>

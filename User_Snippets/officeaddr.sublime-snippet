@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+701-B, Westgate Building B-wing, Nr YMCA Club, Makarba, S.G. Highway, Ahmedabad, Makarba
+]]></content>
+	<tabTrigger>officeaddr</tabTrigger>
+	<scope>text.*,source.*</scope>
+</snippet>

@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+// @todo ${1:Comment about the task pending to be done}$0.
+]]></content>
+	<tabTrigger>psr2_todo_inline_cmnts</tabTrigger>
+	<scope>source.php,text.html.twig,text.html.phtml,text.html.tpl,source.js</scope>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+${1:text/plain | application/x-www-form-urlencoded | multipart/form-data}
+enctype="application/x-www-form-urlencoded"$0
+]]></content>
+	<tabTrigger>formenctpyeurlncodd</tabTrigger>
+	<scope>text.html,source.php,text.html.twig,text.html.ctp,text.html.tpl,text.html.phtml</scope>
+</snippet>

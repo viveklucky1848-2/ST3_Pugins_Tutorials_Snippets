@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+
+ * Set ${1:description}.
+ *$0
+]]></content>
+	<tabTrigger>func_cmmnt_setter</tabTrigger>
+</snippet>
